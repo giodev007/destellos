@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Destellos De Belleza, Salon & Spa en Paseo General Escalon. Peinados, maquillaje y unas para eventos, novias y cuidado personal.">
+  <title>Destellos De Belleza | Salon & Spa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="Destellos De Belleza inicio">
+      <span class="brand-mark">D</span>
+      <span>
+        <strong>Destellos De Belleza</strong>
+        <small>Salon & Spa</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" data-nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#promociones">Promociones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-label="Destellos De Belleza">
+      <div class="hero-content">
+        <p class="eyebrow">Salon & Spa en San Salvador</p>
+        <h1>Destellos De Belleza</h1>
+        <p class="hero-copy">Peinados, maquillaje y unas con acabado elegante para bodas, eventos y cada ocasion donde quieres verte impecable.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/50373195608?text=Hola%20Destellos%20De%20Belleza%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+          <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <a class="hero-location" href="https://maps.google.com/?q=Paseo%20General%20Escalon%203656%2C%20frente%20a%20Millennium%20plaza" target="_blank" rel="noopener">
+        Paseo General Escalon 3656, frente a Millennium Plaza
+      </a>
+    </section>
+
+    <section class="intro-section" aria-label="Resumen">
+      <div class="intro-copy">
+        <p class="eyebrow">Atencion completa</p>
+        <h2>Un look listo para brillar, de principio a fin.</h2>
+      </div>
+      <div class="intro-points">
+        <span>Maquillaje social y de novia</span>
+        <span>Peinados para eventos</span>
+        <span>Unas acrilicas y disenos</span>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="section-heading">
+        <p class="eyebrow">Servicios</p>
+        <h2>Belleza para cada ocasion</h2>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="image-switcher" data-carousel>
+            <img src="assets/peinado-ondas.jpg" alt="Peinado con ondas rubias realizado en Destellos De Belleza" data-carousel-image>
+            <button class="switch-btn" type="button" data-carousel-next aria-label="Ver otro peinado">Siguiente</button>
+            <span class="switch-count" data-carousel-count>1 / 3</span>
+          </div>
+          <div class="service-content">
+            <h3>Peinados</h3>
+            <p>Ondas, recogidos y estilizados para novias, graduaciones, sesiones y eventos especiales.</p>
+          </div>
+        </article>
+
+        <article class="service-card featured-service">
+          <div class="image-switcher" data-carousel>
+            <img src="assets/maquillaje-social.jpg" alt="Maquillaje social elegante con acabado luminoso" data-carousel-image>
+            <button class="switch-btn" type="button" data-carousel-next aria-label="Ver otro maquillaje">Siguiente</button>
+            <span class="switch-count" data-carousel-count>1 / 3</span>
+          </div>
+          <div class="service-content">
+            <h3>Maquillaje</h3>
+            <p>Maquillaje social, glam y de novia con una presencia pulida para fotografia y celebraciones.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="image-switcher" data-carousel>
+            <img src="assets/unas-acrilicas-corazones.jpg" alt="Unas acrilicas rosadas con detalles de corazones" data-carousel-image>
+            <button class="switch-btn" type="button" data-carousel-next aria-label="Ver otras unas">Siguiente</button>
+            <span class="switch-count" data-carousel-count>1 / 3</span>
+          </div>
+          <div class="service-content">
+            <h3>Unas</h3>
+            <p>Unas acrilicas, banos de acrilico y estilos personalizados con detalles delicados.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner-section" id="promociones">
+      <div class="banner-copy">
+        <p class="eyebrow">Agenda tu cita</p>
+        <h2>Paquetes de maquillaje para verte lista sin complicarte.</h2>
+        <p>Pregunta por disponibilidad, precios vigentes y horarios directamente por WhatsApp.</p>
+        <button class="btn btn-light" type="button" data-promo-next>Ver siguiente paquete</button>
+        <a class="btn btn-dark" href="https://wa.me/50373195608?text=Hola%20Destellos%20De%20Belleza%2C%20quiero%20informacion%20sobre%20paquetes%20de%20maquillaje" target="_blank" rel="noopener">Consultar paquetes</a>
+      </div>
+      <div class="promo-switcher" data-carousel data-promo-carousel>
+        <img src="assets/paquete-novia.jpg" alt="Promocion de maquillaje de novia de Destellos De Belleza" data-carousel-image>
+        <span class="promo-count" data-carousel-count>1 / 6</span>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="galeria">
+      <div class="section-heading">
+        <p class="eyebrow">Galeria</p>
+        <h2>Trabajos recientes</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <img class="gallery-tall" src="assets/hero-maquillaje-novia.jpg" alt="Maquillaje y peinado para novia">
+        <img src="assets/color-peinado.jpg" alt="Color y peinado con ondas">
+        <img src="assets/unas-acrilicas-blancas.jpg" alt="Unas acrilicas blancas">
+        <img class="gallery-wide" src="assets/maquillaje-social.jpg" alt="Maquillaje social glam">
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="contact-copy">
+        <p class="eyebrow">Contacto</p>
+        <h2>Reserva tu cita en Destellos De Belleza.</h2>
+        <p>Estamos ubicados en Paseo General Escalon 3656, frente a Millennium Plaza.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="https://wa.me/50373195608?text=Hola%20Destellos%20De%20Belleza%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">
+          <span>WhatsApp</span>
+          <strong>7319 5608</strong>
+        </a>
+        <a class="contact-item" href="tel:+50321243169">
+          <span>Telefono</span>
+          <strong>2124 3169</strong>
+        </a>
+        <a class="contact-item" href="mailto:sdestellos@yahoo.com">
+          <span>Correo</span>
+          <strong>sdestellos@yahoo.com</strong>
+        </a>
+        <a class="contact-item" href="https://www.facebook.com/DESTELLOSDEBELLEZASALON" target="_blank" rel="noopener">
+          <span>Facebook</span>
+          <strong>Destellos De Belleza Salon</strong>
+        </a>
+      </div>
+
+      <div class="hours">
+        <h3>Horario</h3>
+        <p>Lunes a viernes: 6:00 a.m. - 6:00 p.m.</p>
+        <p>Domingo: 8:00 a.m. - 5:00 p.m.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Destellos De Belleza, Salon & Spa</p>
+    <a href="https://wa.me/50373195608?text=Hola%20Destellos%20De%20Belleza%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/50373195608?text=Hola%20Destellos%20De%20Belleza%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">
+    WA
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
