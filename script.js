@@ -69,6 +69,68 @@ const carouselData = [
       src: "assets/paquete-glam.jpg",
       alt: "Promocion de maquillaje glam de Destellos De Belleza"
     }
+  ],
+  [
+    {
+      src: "assets/peinado-ondas.jpg",
+      alt: "Peinado con ondas rubias",
+      label: "Peinados"
+    },
+    {
+      src: "assets/peinado-color.jpg",
+      alt: "Color y peinado con ondas claras",
+      label: "Peinados"
+    },
+    {
+      src: "assets/peinado-volumen.jpg",
+      alt: "Peinado rubio con volumen",
+      label: "Peinados"
+    },
+    {
+      src: "assets/peinado-liso.jpg",
+      alt: "Peinado liso con acabado brillante",
+      label: "Peinados"
+    },
+    {
+      src: "assets/unas-acrilicas-corazones.jpg",
+      alt: "Unas acrilicas con corazones",
+      label: "Unas"
+    },
+    {
+      src: "assets/unas-acrilicas-blancas.jpg",
+      alt: "Unas acrilicas blancas",
+      label: "Unas"
+    },
+    {
+      src: "assets/unas-rojas.jpg",
+      alt: "Unas acrilicas rojas y blancas",
+      label: "Unas"
+    },
+    {
+      src: "assets/unas-francesas.jpg",
+      alt: "Unas francesas con acabado delicado",
+      label: "Unas"
+    },
+    {
+      src: "assets/maquillaje-social.jpg",
+      alt: "Maquillaje social luminoso",
+      label: "Maquillaje"
+    },
+    {
+      src: "assets/maquillaje-novia.jpg",
+      alt: "Maquillaje de novia",
+      label: "Maquillaje"
+    },
+    {
+      src: "assets/maquillaje-glam.jpg",
+      alt: "Maquillaje glam para evento",
+      label: "Maquillaje"
+    },
+    {
+      src: "assets/maquillaje-reina.jpg",
+      alt: "Maquillaje elegante con corona",
+      label: "Maquillaje"
+    }
   ]
 ];
 
@@ -79,12 +141,16 @@ function updateHeader() {
 function showCarouselItem(carousel, items, index) {
   const image = carousel.querySelector("[data-carousel-image]");
   const count = carousel.querySelector("[data-carousel-count]");
+  const label = carousel.querySelector("[data-carousel-label]");
   const item = items[index];
 
   carousel.classList.add("is-changing");
   image.src = item.src;
   image.alt = item.alt;
   count.textContent = `${index + 1} / ${items.length}`;
+  if (label && item.label) {
+    label.textContent = item.label;
+  }
 
   window.setTimeout(() => {
     carousel.classList.remove("is-changing");
@@ -96,16 +162,16 @@ document.querySelectorAll("[data-carousel]").forEach((carousel, carouselIndex) =
   if (!items) return;
 
   let activeIndex = 0;
-  const nextButton = carousel.querySelector("[data-carousel-next]");
-  const promoButton = carousel.matches("[data-promo-carousel]") ? document.querySelector("[data-promo-next]") : null;
-  const button = nextButton || promoButton;
+  const controls = carousel.querySelectorAll("[data-carousel-control]");
 
   showCarouselItem(carousel, items, activeIndex);
 
-  if (!button) return;
-  button.addEventListener("click", () => {
-    activeIndex = (activeIndex + 1) % items.length;
-    showCarouselItem(carousel, items, activeIndex);
+  controls.forEach((button) => {
+    button.addEventListener("click", () => {
+      const direction = button.dataset.carouselControl === "prev" ? -1 : 1;
+      activeIndex = (activeIndex + direction + items.length) % items.length;
+      showCarouselItem(carousel, items, activeIndex);
+    });
   });
 });
 

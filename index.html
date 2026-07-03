@@ -69,7 +69,7 @@
         <article class="service-card">
           <div class="image-switcher" data-carousel>
             <img src="assets/peinado-ondas.jpg" alt="Peinado con ondas rubias realizado en Destellos De Belleza" data-carousel-image>
-            <button class="switch-btn" type="button" data-carousel-next aria-label="Ver otro peinado">Siguiente</button>
+            <button class="switch-btn" type="button" data-carousel-control="next" aria-label="Ver otro peinado">Siguiente</button>
             <span class="switch-count" data-carousel-count>1 / 3</span>
           </div>
           <div class="service-content">
@@ -81,7 +81,7 @@
         <article class="service-card featured-service">
           <div class="image-switcher" data-carousel>
             <img src="assets/maquillaje-social.jpg" alt="Maquillaje social elegante con acabado luminoso" data-carousel-image>
-            <button class="switch-btn" type="button" data-carousel-next aria-label="Ver otro maquillaje">Siguiente</button>
+            <button class="switch-btn" type="button" data-carousel-control="next" aria-label="Ver otro maquillaje">Siguiente</button>
             <span class="switch-count" data-carousel-count>1 / 3</span>
           </div>
           <div class="service-content">
@@ -93,7 +93,7 @@
         <article class="service-card">
           <div class="image-switcher" data-carousel>
             <img src="assets/unas-acrilicas-corazones.jpg" alt="Unas acrilicas rosadas con detalles de corazones" data-carousel-image>
-            <button class="switch-btn" type="button" data-carousel-next aria-label="Ver otras unas">Siguiente</button>
+            <button class="switch-btn" type="button" data-carousel-control="next" aria-label="Ver otras unas">Siguiente</button>
             <span class="switch-count" data-carousel-count>1 / 3</span>
           </div>
           <div class="service-content">
@@ -109,26 +109,32 @@
         <p class="eyebrow">Agenda tu cita</p>
         <h2>Paquetes de maquillaje para verte lista sin complicarte.</h2>
         <p>Pregunta por disponibilidad, precios vigentes y horarios directamente por WhatsApp.</p>
-        <button class="btn btn-light" type="button" data-promo-next>Ver siguiente paquete</button>
         <a class="btn btn-dark" href="https://wa.me/50373195608?text=Hola%20Destellos%20De%20Belleza%2C%20quiero%20informacion%20sobre%20paquetes%20de%20maquillaje" target="_blank" rel="noopener">Consultar paquetes</a>
       </div>
       <div class="promo-switcher" data-carousel data-promo-carousel>
         <img src="assets/paquete-novia.jpg" alt="Promocion de maquillaje de novia de Destellos De Belleza" data-carousel-image>
+        <button class="carousel-arrow carousel-arrow-left" type="button" data-carousel-control="prev" aria-label="Ver paquete anterior">&lt;</button>
+        <button class="carousel-arrow carousel-arrow-right" type="button" data-carousel-control="next" aria-label="Ver siguiente paquete">&gt;</button>
         <span class="promo-count" data-carousel-count>1 / 6</span>
       </div>
     </section>
 
     <section class="section gallery-section" id="galeria">
-      <div class="section-heading">
-        <p class="eyebrow">Galeria</p>
-        <h2>Trabajos recientes</h2>
-      </div>
+      <div class="work-showcase">
+        <div class="work-copy">
+          <p class="eyebrow">Galeria</p>
+          <h2>Trabajos recientes</h2>
+          <p>Explora una seleccion de peinados, unas y maquillajes realizados en el salon. Cada foto muestra acabados pensados para eventos, sesiones, celebraciones y citas especiales.</p>
+          <a class="btn btn-primary" href="https://wa.me/50373195608?text=Hola%20Destellos%20De%20Belleza%2C%20vi%20la%20galeria%20y%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">Agendar mi look</a>
+        </div>
 
-      <div class="gallery-grid">
-        <img class="gallery-tall" src="assets/hero-maquillaje-novia.jpg" alt="Maquillaje y peinado para novia">
-        <img src="assets/color-peinado.jpg" alt="Color y peinado con ondas">
-        <img src="assets/unas-acrilicas-blancas.jpg" alt="Unas acrilicas blancas">
-        <img class="gallery-wide" src="assets/maquillaje-social.jpg" alt="Maquillaje social glam">
+        <div class="recent-carousel" data-carousel data-recent-carousel>
+          <img src="assets/peinado-ondas.jpg" alt="Peinado con ondas rubias" data-carousel-image>
+          <button class="carousel-arrow carousel-arrow-left" type="button" data-carousel-control="prev" aria-label="Ver trabajo anterior">&lt;</button>
+          <button class="carousel-arrow carousel-arrow-right" type="button" data-carousel-control="next" aria-label="Ver siguiente trabajo">&gt;</button>
+          <span class="recent-tag" data-carousel-label>Peinados</span>
+          <span class="promo-count" data-carousel-count>1 / 12</span>
+        </div>
       </div>
     </section>
 
